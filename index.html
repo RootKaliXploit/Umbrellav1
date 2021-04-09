@@ -13,7 +13,6 @@
 <div id=Popup onclick="Popup.classList.remove('animation');"><div id="PopIcon"></div><div id="PopTitle"></div></div>
 <div id=BottomPopup></div>
 <div id=InfoButton><div id=R1BUTTON></div>- Show Payload Info</div>
-<div id=cacheInfo></div>
 
 <div id=MenuContainer class=MenuContainer onclick=GetInfo()>
 <div id=MainMenu class=MenuPos>
@@ -52,12 +51,6 @@ c=c.substring(1,c.length);if(c.indexOf(nameEQ)==0)
 return c.substring(nameEQ.length,c.length);}
 return null;}
 function DLProgress(e){ScrOverlay.style.display="block";Percent=(Math.round(e.loaded/e.total*100));cacheUPDtxt.innerHTML="Installing Offline Cache: "+Percent+"%";CacheBar.style.width=Percent+'%';}
-function DisplayCacheProgress(){setTimeout(function(){cacheUPDtxt.innerHTML="Cache Installed Successfully";},1000);setTimeout(function(){ScrOverlay.style.opacity="0";},2500);setTimeout(function(){ScrOverlay.style.display="none";},3500);}
-window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};window.applicationCache.onerror=function(e){window.cacheUPDtxt.innerHTML="Error Installing Cache";};if(LS.KernEpochDiff==null){LS.KernEpochDiff=0;}
-if(LS.CurrentTemp==null){LS.CurrentTemp=79;}
-if(RC('KernEpochDiff')==null){CC('KernEpochDiff',LS.KernEpochDiff,365);}
-if(RC('CurrentTemp')==null){CC('CurrentTemp',LS.CurrentTemp,365);}
-window.onunload=function(e){CC("CurrentTemp",LS.CurrentTemp,365);CC("KernEpochDiff",LS.KernEpochDiff,365);};var UA=navigator.userAgent.substring(navigator.userAgent.indexOf("5.0 (")+19,navigator.userAgent.indexOf(") Apple"));if(LS.TrueFW==null){if(UA=="5.05"||UA=="5.07"){LS.TrueFW=(Number(UA));}else{LS.TrueFW="Spoofed";}}
 function ShowFirmwareVer(){OffFW.style.display='block';SpoFW.style.display='block';if(LS.TrueFW==null){if(UA=="5.05"||UA=="5.07"){LS.TrueFW=(Number(UA));OfficialFW=LS.TrueFW;}else{LS.TrueFW="Spoofed";OfficialFW=LS.TrueFW;}}else{OfficialFW=LS.TrueFW;}
 ReportedFW=UA;OfficialFW=LS.TrueFW;if(OfficialFW==ReportedFW){OffFW.innerHTML=("Official Firmware v"+OfficialFW+" detected");}else{OfficialFW=LS.TrueFW;OffFW.innerHTML=("Official Firmware: v"+OfficialFW);SpoFW.innerHTML=("Currently Spoofed To: v"+ReportedFW);}
 if(isNaN(ReportedFW)){OffFW.innerHTML=("NO PS4 DETECTED");}
