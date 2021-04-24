@@ -1,6 +1,6 @@
 CACHE MANIFEST 
 # v4 
-# 24/04/2021-17:45:24,76 
+# 25/04/2021- 0:38:37,53 
 
 
 CACHE: 
@@ -19,6 +19,8 @@ files\3ArabicGuy.js
 files\3CALLER.html
 files\3CALLER.js
 files\750.js
+files\Activator.html
+files\Activator.js
 files\blob.js
 files\disableupdates.js
 files\exploit.css
@@ -42,6 +44,7 @@ files\loader-755.js
 files\Mira.html
 files\netcat.js
 files\ps4.js
+files\ps4debug.js
 files\restore.js
 files\style.css
 files\style2.css
@@ -55,13 +58,18 @@ files\img\01.png
 files\img\011.png
 files\img\01b.png
 files\img\BG.jpg
+files\img\BG.png
 files\img\BG2.jpg
-files\img\FanControl.svg
-files\img\ftp.svg
-files\img\hen.svg
-files\img\linux.svg
+files\img\Bin.png
+files\img\dis.updates.png
+files\img\FanControl.png
+files\img\ftp.png
+files\img\hack.png
+files\img\hen.png
 files\img\menugta.svg
 files\img\PopUp.jpg
+files\img\Rebug.png
+files\img\Rebug1.png
 files\img\SubBG.jpg
 files\img\SubBG2.jpg
 
