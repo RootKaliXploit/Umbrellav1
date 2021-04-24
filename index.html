@@ -1,8 +1,11 @@
-<html
+<html manifest="offline.manifest">
 <head>
 <title>Morpheus HostXploit 7.55</title>
 <link rel="stylesheet prefetch" href="files/style.css">
 <script>
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));document.getElementById="display:none";window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+document.cookie = 'kex=1';
 </script>
 </head>
 <body>
@@ -23,7 +26,8 @@
 ><div PL-Title="Fan Control"      PL-Bin=""           PL-Ver=""   PL-Desc="" class="Box Icon"><img src="files/img/FanControl.svg"></div
 ><div PL-Title="Bin Loader"       PL-Bin="BINLOADER"  PL-Ver="v1.0 - By Specter"  PL-Desc="Loads a bin file sent to the PS4 IP address on port 9020.<br><br>This version of Bin Loader can also load extra large bin files up to 12.58MB in size." class="Box Icon">&#xf019;</div
 ><div PL-Title="Disable Updates" PL-Bin="UpdatesDisable.bin" PL-Ver=""                PL-Desc="" class="Box Icon">&#xf771;</div
-><div  PL-Title="FTP"              PL-Bin="FTP.bin"     PL-Ver=""  PL-Desc="" class="Box Icon"><img src="files/img/ftp.svg"></div
+><div  PL-Title="FTP"              PL-Bin="FTP.bin"     PL-Ver=""  PL-Desc="" class="Box Icon"><img src="files/img/ftp.png"></div
+><div  PL-Title="ToDex"              PL-Bin="todex.js"     PL-Ver=""  PL-Desc="" class="Box Icon"><img src="files/img/Rebug.png"></div
 ></div></div>
 <div id=SubMenu1Container class=SubMenuContainer style=display:none onclick=GetInfo()>
 <div id=SubMenu1 class=SubMenuPos>
